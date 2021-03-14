@@ -13,5 +13,8 @@ table_rows = table.find_all('tr')
 
 for tr in table_rows:
     td = tr.find_all('td')
-    row = [i.text for i in td]
-    print(row)
+    status = td[0]
+    title = td[1]
+    print(status.text.strip())
+    print(title.text.strip())
+    print('-------------------------------')
